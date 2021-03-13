@@ -1,0 +1,70 @@
+inherited View_CadastroTabela: TView_CadastroTabela
+  Left = 275
+  Top = 122
+  Caption = 'Cadastro de Tabela do Sistema'
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  inherited Nb_Cadastro: TNotebook
+    inherited Pg_Pesquisa: TPage
+      inherited Pnl_TopPesquisa: TPanel
+        Height = 52
+        ClientHeight = 52
+        OnClick = Pnl_TopPesquisaClick
+        inherited Panel2: TPanel
+          Height = 50
+          ClientHeight = 50
+          inherited Panel4: TPanel
+            Height = 48
+            ClientHeight = 48
+            inherited CmbBx_CamposPesquisa: TComboBox
+              Top = 20
+            end
+          end
+          inherited Panel5: TPanel
+            Height = 48
+            ClientHeight = 48
+            inherited Edt_Pesquisa: TEdit
+              Height = 21
+              Align = alRight
+              BorderStyle = bsNone
+              Font.Height = -16
+              ParentFont = False
+            end
+            inherited Btn_Pesquisar: TBitBtn
+              Left = 448
+              Top = 21
+            end
+          end
+        end
+        object Label1: TLabel[1]
+          Left = 16
+          Height = 16
+          Top = 18
+          Width = 93
+          Caption = 'Pesquisar por '
+          ParentColor = False
+        end
+      end
+      inherited Pnl_GridPesquisa: TPanel
+        Height = 520
+        Top = 52
+        ClientHeight = 520
+        inherited DBGrd_Pesquisa: TDBGrid
+          Height = 518
+        end
+      end
+    end
+  end
+  inherited DtSrc_Pesquisa: TDataSource
+    Left = 96
+    Top = 528
+  end
+  inherited DtSrc_Dados: TDataSource
+    Left = 224
+    Top = 536
+  end
+  object DtSrc_DadosDetalhe: TDataSource[4]
+    Left = 384
+    Top = 528
+  end
+end

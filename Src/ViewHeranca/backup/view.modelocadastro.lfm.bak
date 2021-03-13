@@ -1,0 +1,321 @@
+inherited View_ModeloCadastro: TView_ModeloCadastro
+  Left = 232
+  Height = 600
+  Top = 109
+  Width = 1000
+  Caption = 'View_ModeloCadastro'
+  ClientHeight = 600
+  ClientWidth = 1000
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
+  object Nb_Cadastro: TNotebook[0]
+    Left = 0
+    Height = 572
+    Top = 28
+    Width = 1000
+    PageIndex = 0
+    Align = alClient
+    TabOrder = 0
+    object Pg_Pesquisa: TPage
+      object Pnl_TopPesquisa: TPanel
+        Left = 0
+        Height = 56
+        Top = 0
+        Width = 1000
+        Align = alTop
+        ClientHeight = 56
+        ClientWidth = 1000
+        TabOrder = 0
+        OnClick = Pnl_TopPesquisaClick
+        object Panel2: TPanel
+          Left = 1
+          Height = 54
+          Top = 1
+          Width = 998
+          Align = alClient
+          ClientHeight = 54
+          ClientWidth = 998
+          TabOrder = 0
+          object Panel4: TPanel
+            Left = 1
+            Height = 52
+            Top = 1
+            Width = 207
+            Align = alLeft
+            ClientHeight = 52
+            ClientWidth = 207
+            TabOrder = 0
+            object Lbl_PesquisarPor: TLabel
+              Left = 4
+              Height = 16
+              Top = 4
+              Width = 199
+              Align = alTop
+              BorderSpacing.Around = 3
+              Caption = 'Pesquisar por '
+              ParentColor = False
+            end
+            object CmbBx_CamposPesquisa: TComboBox
+              Left = 4
+              Height = 24
+              Top = 24
+              Width = 199
+              Align = alBottom
+              BorderSpacing.Around = 3
+              ItemHeight = 16
+              Items.Strings = (
+                'ID'
+              )
+              Style = csDropDownList
+              TabOrder = 0
+            end
+          end
+          object Panel5: TPanel
+            Left = 208
+            Height = 52
+            Top = 1
+            Width = 789
+            Align = alClient
+            ClientHeight = 52
+            ClientWidth = 789
+            TabOrder = 1
+            object Lbl_CampoPesquisa: TLabel
+              Left = 4
+              Height = 16
+              Top = 4
+              Width = 781
+              Align = alTop
+              BorderSpacing.Around = 3
+              Caption = 'Campo'
+              ParentColor = False
+            end
+            object Edt_Pesquisa: TEdit
+              Left = 4
+              Height = 24
+              Top = 23
+              Width = 434
+              BorderSpacing.Left = 3
+              BorderSpacing.Top = 3
+              BorderSpacing.Right = 350
+              BorderSpacing.Bottom = 3
+              OnKeyDown = FormKeyDown
+              TabOrder = 0
+              TextHint = 'Digite o que deseja pesquisar'
+            end
+            object Btn_Pesquisar: TBitBtn
+              Left = 440
+              Height = 24
+              Top = 24
+              Width = 128
+              BorderSpacing.Around = 1
+              Caption = 'Pesquisar [F7]'
+              Images = DM_Container.ImgLst_Cadastro
+              ImageIndex = 37
+              TabOrder = 1
+            end
+          end
+        end
+      end
+      object Pnl_GridPesquisa: TPanel
+        Left = 0
+        Height = 516
+        Top = 56
+        Width = 1000
+        Align = alClient
+        ClientHeight = 516
+        ClientWidth = 1000
+        TabOrder = 1
+        object DBGrd_Pesquisa: TDBGrid
+          Left = 1
+          Height = 514
+          Top = 1
+          Width = 998
+          Align = alClient
+          AlternateColor = clMoneyGreen
+          Color = clWindow
+          Columns = <>
+          DataSource = DtSrc_Pesquisa
+          DefaultRowHeight = 32
+          FixedColor = 4194368
+          FixedCols = 0
+          Options = [dgTitles, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+          TabOrder = 0
+          TitleFont.CharSet = ANSI_CHARSET
+          TitleFont.Color = clWhite
+          TitleFont.Height = -13
+          TitleFont.Name = 'Verdana'
+          TitleFont.Pitch = fpVariable
+          TitleFont.Quality = fqDraft
+        end
+      end
+    end
+    object Pg_Dados: TPage
+      object Pnl_BackGroundDados: TPanel
+        Left = 0
+        Height = 572
+        Top = 0
+        Width = 1000
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+  end
+  object Panel1: TPanel[1]
+    Left = 0
+    Height = 28
+    Top = 0
+    Width = 1000
+    Align = alTop
+    ClientHeight = 28
+    ClientWidth = 1000
+    TabOrder = 1
+    object Panel3: TPanel
+      Left = 1
+      Height = 26
+      Top = 1
+      Width = 103
+      Align = alLeft
+      ClientHeight = 26
+      ClientWidth = 103
+      TabOrder = 0
+      object Btn_PrimeiroRegistro: TSpeedButton
+        Left = 1
+        Height = 24
+        Top = 1
+        Width = 24
+        Align = alLeft
+        Images = DM_Container.ImgLst_Cadastro
+        ImageIndex = 20
+      end
+      object Btn_ProximoRegistro: TSpeedButton
+        Left = 25
+        Height = 24
+        Top = 1
+        Width = 24
+        Align = alLeft
+        Images = DM_Container.ImgLst_Cadastro
+        ImageIndex = 19
+      end
+      object Btn_RegistroAnterior: TSpeedButton
+        Left = 49
+        Height = 24
+        Top = 1
+        Width = 24
+        Align = alLeft
+        Images = DM_Container.ImgLst_Cadastro
+        ImageIndex = 22
+      end
+      object Btn_UltimoRegistro: TSpeedButton
+        Left = 73
+        Height = 24
+        Top = 1
+        Width = 24
+        Align = alLeft
+        Images = DM_Container.ImgLst_Cadastro
+        ImageIndex = 21
+      end
+    end
+    object Btn_Incluir: TBitBtn
+      Left = 111
+      Height = 24
+      Top = 2
+      Width = 130
+      Align = alLeft
+      BorderSpacing.Around = 1
+      Caption = 'Incluir [F2]'
+      Images = DM_Container.ImgLst_Cadastro
+      ImageIndex = 0
+      OnClick = Btn_IncluirClick
+      TabOrder = 1
+    end
+    object Btn_Salvar: TBitBtn
+      Left = 766
+      Height = 24
+      Top = 2
+      Width = 130
+      Align = alLeft
+      BorderSpacing.Around = 1
+      Caption = 'Salvar [F10]'
+      Images = DM_Container.ImgLst_Cadastro
+      ImageIndex = 9
+      TabOrder = 2
+    end
+    object Btn_Cancelar: TBitBtn
+      Left = 635
+      Height = 24
+      Top = 2
+      Width = 130
+      Align = alLeft
+      BorderSpacing.Around = 1
+      Caption = 'Cancelar [ESC]'
+      Images = DM_Container.ImgLst_Cadastro
+      ImageIndex = 10
+      OnClick = Btn_CancelarClick
+      TabOrder = 3
+    end
+    object Btn_Imprimir: TBitBtn
+      Left = 373
+      Height = 24
+      Top = 2
+      Width = 130
+      Align = alLeft
+      BorderSpacing.Around = 1
+      Caption = 'Imprimir [F4]'
+      Images = DM_Container.ImgLst_Cadastro
+      ImageIndex = 4
+      TabOrder = 4
+    end
+    object Btn_Alterar: TBitBtn
+      Left = 242
+      Height = 24
+      Top = 2
+      Width = 130
+      Align = alLeft
+      BorderSpacing.Around = 1
+      Caption = 'Alterar [F3]'
+      Images = DM_Container.ImgLst_Cadastro
+      ImageIndex = 1
+      TabOrder = 5
+    end
+    object Btn_Apagar: TBitBtn
+      Left = 504
+      Height = 24
+      Top = 2
+      Width = 130
+      Align = alLeft
+      BorderSpacing.Around = 1
+      Caption = 'Apagar[F6]'
+      Images = DM_Container.ImgLst_Cadastro
+      ImageIndex = 2
+      TabOrder = 6
+    end
+    object Lbl_StatusTela: TLabel
+      Left = 109
+      Height = 21
+      Top = 6
+      Width = 1
+      Align = alLeft
+      BorderSpacing.Left = 5
+      BorderSpacing.Top = 5
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clMaroon
+      Font.Height = -13
+      Font.Name = 'Verdana'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsUnderline]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object DtSrc_Pesquisa: TDataSource[2]
+    Left = 48
+    Top = 520
+  end
+  object DtSrc_Dados: TDataSource[3]
+    Left = 144
+    Top = 520
+  end
+end

@@ -1,0 +1,13 @@
+object DM_TabelaSistema: TDM_TabelaSistema
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 150
+  HorizontalOffset = 581
+  VerticalOffset = 241
+  Width = 332
+  object TabelaSistema: TBufDataset
+    FieldDefs = <>
+    Left = 89
+    Top = 29
+  end
+end

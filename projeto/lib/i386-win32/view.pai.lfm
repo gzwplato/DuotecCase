@@ -1,0 +1,15 @@
+object View_Pai: TView_Pai
+  Left = 248
+  Height = 240
+  Top = 153
+  Width = 320
+  Caption = 'View_Pai'
+  Font.CharSet = ANSI_CHARSET
+  Font.Color = clBlack
+  Font.Height = -13
+  Font.Name = 'Verdana'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnCreate = FormCreate
+  LCLVersion = '2.0.12.0'
+end
